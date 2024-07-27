@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones Angeles de Esperanza</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Donaciones Angeles de Esperanza</h1>
+            <img src="images/logo.png" alt="Angeles de Esperanza" class="header-image">
+            <p>Meta: Q40,000.00</p>
+        </div>
+        <div class="content-top">
+            <div class="thermometer-container">
+                <div class="thermometer">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <div class="segments">
+                        <div class="segment" style="bottom: 25%">Q10,000</div>
+                        <div class="segment" style="bottom: 50%">Q20,000</div>
+                        <div class="segment" style="bottom: 75%">Q30,000</div>
+                        <div class="segment" style="bottom: 85%">Q35,000</div>
+                        <div class="segment" style="bottom: 96%">Q40,000</div>
+                    </div>
+                </div>
+                <div class="progress-summary">
+                    <p id="progressText">Q0 / Q40,000 (0%)</p>
+                </div>
+            </div>
+            <div class="donation-form">
+                <input type="hidden" id="editingIndex" value="">
+                <input type="text" id="donorName" placeholder="Nombre del donante">
+                <input type="number" id="donationAmount" placeholder="Cantidad de la donación">
+                <button id="addDonation">Agregar/Actualizar Donación</button>
+            </div>
+            <div class="messages-container" id="messages"></div>
+        </div>
+        <div class="content-bottom">
+            <div class="donations-list">
+                <h2>Donaciones</h2>
+                <table id="donationsTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="pagination">
+                    <button id="prevPage" disabled>&laquo; Anterior</button>
+                    <button id="nextPage">Siguiente &raquo;</button>
+                </div>
+            </div>
+        </div>
+        <div id="confetti"></div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

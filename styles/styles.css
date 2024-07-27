@@ -1,0 +1,244 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #333;
+    padding: 20px 0;
+}
+
+.container {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.header-image {
+    width: 200px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Opcional: para bordes redondeados */
+    margin-top: 10px; /* Espacio entre el texto y la imagen */
+}
+
+.donation-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.donation-form input {
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.donation-form button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #76c7c0;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.donation-form button:hover {
+    background-color: #5ca8a0;
+}
+
+.content-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.thermometer-container {
+    position: relative;
+    height: 600px;
+    width: 150px;
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.thermometer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #e0e0e0;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: #76c7c0;
+    transition: height 0.5s;
+}
+
+.segments {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.segment {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.progress-summary {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+#progressText {
+    font-size: 0.75em;
+    color: #333;
+    margin: 0;
+}
+
+.content-bottom {
+    width: 100%;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.donations-list {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.donations-list h2 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#donationsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    table-layout: fixed;
+    height: 100%;
+}
+
+#donationsTable th, #donationsTable td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#donationsTable th {
+    background-color: #f4f4f4;
+}
+
+#donationsTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#donationsTable tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: none;
+    z-index: 1000;
+}
+
+.messages-container {
+    margin-top: 20px;
+}
+
+.message {
+    background-color: #76c7c0;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #76c7c0;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #5ca8a0;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffde00;
+    border-radius: 50%;
+    animation: confetti-fall 3s infinite;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(1000px) rotate(360deg);
+        opacity: 0;
+    }
+}
